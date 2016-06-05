@@ -32,5 +32,9 @@ public class ApplePicker : MonoBehaviour {
 		GameObject tBasketGO = basketList [basketIndex];
 		basketList.RemoveAt (basketIndex);
 		Destroy (tBasketGO);
+	
+		if (basketList.Count == 0) {
+			Application.LoadLevel ("_Scene_0");
+		}
 	}
 }
